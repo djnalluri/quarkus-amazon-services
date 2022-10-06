@@ -1,0 +1,16 @@
+---
+artifact: ${project.groupId}:${project.artifactId}:${project.version}
+name: "Amazon Credentials Provider - RDS"
+metadata:
+  keywords:
+    - "aws"
+    - "amazon"
+    - "credentials"
+    - "provider"
+    - "rds"
+  categories:
+    - "data"
+  guide: https://quarkiverse.github.io/quarkiverse-docs/quarkus-amazon-services/dev/amazon-credentials.html
+  status: "experimental"
+  config:
+  - "quarkus.rds."
