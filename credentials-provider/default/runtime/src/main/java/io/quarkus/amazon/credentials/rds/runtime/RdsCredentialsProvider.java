@@ -7,13 +7,11 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import io.quarkus.arc.Unremovable;
 import io.quarkus.credentials.CredentialsProvider;
 import software.amazon.awssdk.services.rds.RdsUtilities;
 import software.amazon.awssdk.services.rds.model.GenerateAuthenticationTokenRequest;
 
 @ApplicationScoped
-@Unremovable
 @Named("quarkus-amazon-rds")
 public class RdsCredentialsProvider implements CredentialsProvider {
 
@@ -26,7 +24,7 @@ public class RdsCredentialsProvider implements CredentialsProvider {
     @Override
     public Map<String, String> getCredentials(String credentialsProviderName) {
 
-        var entry = config.credentialsProviders.get(credentialsProviderName);
+        var entry = config.credentialsProvider.get(credentialsProviderName);
         if (entry == null) {
             return null;
         }

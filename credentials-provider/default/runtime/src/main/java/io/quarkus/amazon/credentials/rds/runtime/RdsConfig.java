@@ -20,7 +20,7 @@ public class RdsConfig {
      */
     @ConfigDocMapKey("name")
     @ConfigItem
-    public Map<String, RdsCredentialsProviderConfig> credentialsProviders;
+    public Map<String, RdsCredentialsProviderConfig> credentialsProvider;
 
     @ConfigGroup
     public static class RdsCredentialsProviderConfig {
